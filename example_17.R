@@ -45,7 +45,7 @@ phylogeny  <- ape::read.tree(
 ape::write.tree(phylogeny, file = "tree_true.fasta")
 
 alignment_params <- create_alignment_params(
-  site_model = "node_sub_unlinked",
+  site_model = "unlinked_node_sub",
   fasta_filename = "alignment_gen.fasta",
   root_sequence = create_blocked_dna(length = 1000),
   mutation_rate = 0.01,
