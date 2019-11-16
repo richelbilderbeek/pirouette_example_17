@@ -7,26 +7,6 @@
 
 # Set the RNG seed
 rng_seed <- 314
-args <- commandArgs(trailingOnly = TRUE)
-if (length(args) == 1) {
-  arg <- suppressWarnings(as.numeric(args[1]))
-  if (is.na(arg)) {
-    stop(
-      "Please supply a numerical value for the RNG seed. \n",
-      "Actual value: ", args[1]
-    )
-  }
-  rng_seed <- arg
-  if (rng_seed < 1) {
-    stop("Please supply an RNG seed with a positive non-zero value")
-  }
-}
-if (length(args) > 1) {
-  stop(
-    "Please supply only 1 argument for the RNG seed. \n",
-    "Number of arguments given: ", length(args) - 1
-  )
-}
 
 library(pirouette)
 suppressMessages(library(ggplot2))
@@ -46,7 +26,10 @@ ape::write.tree(phylogeny, file = "tree_true.fasta")
 
 alignment_params <- create_alignment_params(
   sim_true_alignment_fun =
-    get_sim_true_alignment_with_unlinked_node_sub_site_model_fun(),
+    get_sim_true_alignment_with_unlinked_node_sub_site_model_fun(
+      branch_mutation_rate = 0.1,
+      node_mutation_rate = 0.1
+    ),
   fasta_filename = "alignment_gen.fasta",
   root_sequence = create_blocked_dna(length = 1000),
   rng_seed = rng_seed
