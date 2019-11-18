@@ -44,7 +44,7 @@ for (i in seq_along(experiments)) {
 }
 
 # Testing
-if (1 == 2) {
+if (1 == 1) {
   for (i in seq_along(experiments)) {
     experiments[[i]]$inference_model$mcmc <- create_mcmc(chain_length = 20000, store_every = 1000)
   }
