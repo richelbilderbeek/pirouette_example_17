@@ -50,13 +50,34 @@ before_install:
 
 before_script:
   - Rscript -e "beastier::install_beast2()"
-  - Rscript -e "mauricer::install_beast2_pkg(\"NS\")"
 
 script:
   # Delete all previous results
   - rm -rf example_17_314
   # Go!
   - travis_wait 60 Rscript example_17.R
+  # Basic files: true tree and alignment
+  - if [ ! -f example_7_314/true_alignment.fas ]; then echo "file 'true_alignment.fas' not found" ; exit 1 ; fi
+  - if [ ! -f example_7_314/true_alignment.png ]; then echo "file 'true_alignment.png' not found" ; exit 1 ; fi
+  # Basic files: twin tree and alignment
+  - if [ ! -f example_7_314/twin_tree.png ]; then echo "file 'twin_tree.png' not found" ; exit 1 ; fi
+  - if [ ! -f example_7_314/twin_alignment.fas ]; then echo "file 'twin_alignment.fas' not found" ; exit 1 ; fi
+  - if [ ! -f example_7_314/twin_alignment.png ]; then echo "file 'twin_alignment.png' not found" ; exit 1 ; fi
+  # Basic files: true alignment, generative model
+  - if [ ! -f example_7_314/true_alignment_gen.xml ]; then echo "file 'true_alignment_gen.xml' not found" ; exit 1 ; fi
+  - if [ ! -f example_7_314/true_alignment_gen.xml.state ]; then echo "file 'true_alignment_gen.xml.state' not found" ; exit 1 ; fi
+  - if [ ! -f example_7_314/true_alignment_gen.log ]; then echo "file 'true_alignment_gen.log' not found" ; exit 1 ; fi
+  - if [ ! -f example_7_314/true_alignment_gen.trees ]; then echo "file 'true_alignment_gen.trees' not found" ; exit 1 ; fi
+  - if [ ! -f example_7_314/true_alignment_gen.csv ]; then echo "file 'true_alignment_gen.csv' not found" ; exit 1 ; fi
+  - if [ ! -f example_7_314/true_errors_gen.csv ]; then echo "file 'true_errors_gen.csv' not found" ; exit 1 ; fi
+  # Derived files: true alignment, generative model
+  - if [ ! -f example_7_314/esses_gen.latex ]; then echo "file 'esses_gen.latex' not found" ; exit 1 ; fi
+  - if [ ! -f example_7_314/true_error_violin_gen.png ]; then echo "file 'true_error_violin_gen.png' not found" ; exit 1 ; fi
+  - if [ ! -f example_7_314/true_posterior_gen.png ]; then echo "file 'true_posterior_gen.png' not found" ; exit 1 ; fi
+  # Derived files: twin alignment, generative model
+  - if [ ! -f example_7_314/esses_twin_gen.latex ]; then echo "file 'esses_twin_gen.latex' not found" ; exit 1 ; fi
+  - if [ ! -f example_7_314/twin_error_violin_gen.png ]; then echo "file 'twin_error_violin_gen.png' not found" ; exit 1 ; fi
+  - if [ ! -f example_7_314/twin_posterior_gen.png ]; then echo "file 'twin_posterior_gen.png' not found" ; exit 1 ; fi
   # Check dead links
   - rm .travis.yml
   - ./scripts/check_dead_links || true
