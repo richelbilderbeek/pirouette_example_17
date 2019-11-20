@@ -52,6 +52,13 @@ for (i in seq_along(experiments)) {
   experiments[[i]]$beast2_options$rng_seed <- rng_seed
 }
 
+# Make the MCMCs shorter
+for (i in seq_along(experiments)) {
+  experiments[[i]]$inference_model$mcmc$chain_length <- 1000000
+  experiments[[i]]$inference_model$mcmc$treelog$log_every <- 100
+  experiments[[i]]$inference_model$mcmc$tracelog$log_every <- 100
+}
+
 # Testing
 if (1 == 2) {
   for (i in seq_along(experiments)) {
