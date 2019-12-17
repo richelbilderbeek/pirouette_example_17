@@ -25,8 +25,8 @@ ape::write.tree(phylogeny, file = "tree_true.fas")
 
 
 alignment_params <- create_alignment_params(
-  sim_true_alignment_fun =
-    get_sim_true_alignment_with_uns_nsm_fun(
+  sim_trall_fun =
+    get_sim_trall_with_uns_nsm_fun(
       branch_mutation_rate = 0.1,
       node_mutation_rate = 0.1
     ),
@@ -70,7 +70,7 @@ twinning_params <- create_twinning_params(
   rng_seed_twin_tree = rng_seed,
   sim_twin_tree_fun = create_copy_twin_tree_from_true_fun(),
   rng_seed_twin_alignment = rng_seed,
-  sim_twin_alignment_fun = get_sim_twin_alignment_with_same_n_mutation_fun(
+  sim_twal_fun = get_sim_twal_with_same_n_mutation_fun(
     mutation_rate = 0.1,
     max_n_tries = 1000
   ),
