@@ -1,11 +1,3 @@
-# Code of example 17
-#
-# Works under Windows
-#
-#
-#
-
-
 library(pirouette)
 suppressMessages(library(ggplot2))
 library(beautier)
