@@ -27,10 +27,8 @@ before_script:
   - Rscript -e "beastier::install_beast2()"
 
 script:
-  # Delete all previous results
-  - rm -rf example_17_314
   # Go!
-  - travis_wait 60 Rscript example_17.R
+  - travis_wait 60 ./scripts/rerun.sh
   # Basic files: true tree and alignment
   - if [ ! -f example_17_314/true_alignment.fas ]; then echo "file 'true_alignment.fas' not found" ; exit 1 ; fi
   - if [ ! -f example_17_314/true_alignment.png ]; then echo "file 'true_alignment.png' not found" ; exit 1 ; fi
