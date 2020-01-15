@@ -32,7 +32,7 @@ name="alignment">
 <map name="OneOnX" >beast.math.distributions.OneOnX</map>
 
 
-<run id="mcmc" spec="MCMC" chainLength="1000000" storeEvery="1000">
+<run id="mcmc" spec="MCMC" chainLength="10000000" storeEvery="1000">
     <state id="state" storeEvery="5000">
         <tree id="Tree.t:twin_alignment" name="stateNode">
             <taxonset id="TaxonSet.twin_alignment" spec="TaxonSet">
@@ -86,7 +86,7 @@ name="alignment">
 
     <operator id="YuleModelWilsonBalding.t:twin_alignment" spec="WilsonBalding" tree="@Tree.t:twin_alignment" weight="3.0"/>
 
-    <logger id="tracelog" fileName="true_alignment_gen_twin.log" logEvery="100" model="@posterior" sanitiseHeaders="true" sort="smart">
+    <logger id="tracelog" fileName="true_alignment_gen_twin.log" logEvery="1000" model="@posterior" sanitiseHeaders="true" sort="smart">
         <log idref="posterior"/>
         <log idref="likelihood"/>
         <log idref="prior"/>
@@ -103,7 +103,7 @@ name="alignment">
         <log idref="prior"/>
     </logger>
 
-    <logger id="treelog.t:twin_alignment" fileName="true_alignment_gen_twin.trees" logEvery="100" mode="tree">
+    <logger id="treelog.t:twin_alignment" fileName="true_alignment_gen_twin.trees" logEvery="1000" mode="tree">
         <log id="TreeWithMetaDataLogger.t:twin_alignment" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:twin_alignment"/>
     </logger>
 
