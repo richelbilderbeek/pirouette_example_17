@@ -11,4 +11,4 @@ nuclotide substitution model.
 
 ## Results
 
-![](example_17_314/errors.png)
+![](example_17/errors.png)
