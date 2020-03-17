@@ -1,0 +1,18 @@
+<itsabeastystatewerein version='2.0' sample='10000000'>
+<statenode id='Tree.t:alignment'>(((0:0.8037382490564009,2:0.8037382490564009)7:0.22551466247919705,((3:0.7973577191462901,5:0.7973577191462901)6:0.08524416934336132,4:0.8826018884896514)9:0.14665102304594657)8:7.738993490711277E-4,1:1.030026810884669)10:0.0</statenode>
+<statenode id='BDBirthRate.t:alignment'>BDBirthRate.t:alignment[1 1] (0.0,10000.0): 1.9184030049053413 </statenode>
+<statenode id='BDDeathRate.t:alignment'>BDDeathRate.t:alignment[1 1] (0.0,1.0): 0.03233426893147801 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"BirthRateScaler.t:alignment","p":0.18786463337014148,"accept":102804,"reject":281519,"acceptFC":101836,"rejectFC":281342,"rejectIv":0,"rejectOp":0},
+{"id":"DeathRateScaler.t:alignment","p":0.08197443170869438,"accept":64491,"reject":320057,"acceptFC":63529,"rejectFC":319930,"rejectIv":192927,"rejectOp":192927},
+{"id":"BirthDeathTreeScaler.t:alignment","p":0.7707634928602476,"accept":73301,"reject":310793,"acceptFC":73219,"rejectFC":309753,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathTreeRootScaler.t:alignment","p":0.602539770094443,"accept":37403,"reject":346930,"acceptFC":37325,"rejectFC":345888,"rejectIv":120812,"rejectOp":120812},
+{"id":"BirthDeathUniformOperator.t:alignment","p":"NaN","accept":1707808,"reject":2137753,"acceptFC":1702974,"rejectFC":2131643,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathSubtreeSlide.t:alignment","p":0.7645196089695437,"accept":156979,"reject":1764397,"acceptFC":156608,"rejectFC":1759243,"rejectIv":513331,"rejectOp":513331},
+{"id":"BirthDeathNarrow.t:alignment","p":"NaN","accept":1029688,"reject":894643,"acceptFC":1026660,"rejectFC":892033,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathWide.t:alignment","p":"NaN","accept":40676,"reject":344904,"acceptFC":40561,"rejectFC":343911,"rejectIv":214181,"rejectOp":214181},
+{"id":"BirthDeathWilsonBalding.t:alignment","p":"NaN","accept":19393,"reject":366462,"acceptFC":19335,"rejectFC":365437,"rejectIv":188552,"rejectOp":188552}
+]}
+-->

@@ -1,0 +1,57 @@
+Loading required package: beautier
+Loading required package: babette
+Loading required package: beastier
+Loading required package: mauricer
+Loading required package: tracerer
+Registered S3 method overwritten by 'pryr':
+  method      from
+  print.bytes Rcpp
+Registered S3 method overwritten by 'geiger':
+  method            from
+  unique.multiPhylo ape 
+Saving 7 x 7 in image
+[1] "example_17/evidence_true.latex"   "example_17/evidence_twin.latex"  
+[3] "example_17/esses_gen.latex"       "example_17/esses_twin_gen.latex" 
+[5] "example_17/esses_best.latex"      "example_17/esses_twin_best.latex"
+
+real	54m38.906s
+user	51m33.656s
+sys	0m56.665s
+
+
+###############################################################################
+Peregrine Cluster
+Job 10154426 for user 'p230198'
+Finished at: Tue Mar 17 11:24:55 CET 2020
+
+Job details:
+============
+
+Name                : pirex17
+User                : p230198
+Partition           : regular
+Nodes               : pg-node009
+Cores               : 1
+State               : COMPLETED
+Submit              : 2020-03-17T10:30:14
+Start               : 2020-03-17T10:30:14
+End                 : 2020-03-17T11:24:54
+Reserved walltime   : 1-00:00:00
+Used walltime       :   00:54:40
+Used CPU time       :   00:52:30 (efficiency: 96.06%)
+% User (Computation): 98.20%
+% System (I/O)      :  1.80%
+Mem reserved        : 10G/node
+Max Mem used        : 979.68M (pg-node009)
+Max Disk Write      : 71.68K (pg-node009)
+Max Disk Read       : 1.35M (pg-node009)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################
