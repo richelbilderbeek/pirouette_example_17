@@ -10,7 +10,7 @@ library(beautier)
 is_testing <- is_on_ci()
 example_no <- 17
 rng_seed <- 314
-folder_name <- paste0("example_", example_no, "_", rng_seed)
+folder_name <- paste0("example_", example_no)
 
 # Create phylogeny
 phylogeny  <- ape::read.tree(
